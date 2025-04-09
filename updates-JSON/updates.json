@@ -2,6 +2,6 @@
   {
     "date": "2025-04-09",
     "title": "Bug Fixes",
-    "description": "We fixed some bugs that were causing slow load times on the timetable page."
+    "description": "So fare i have got the base for the site setup and the main styling. I have also added the acount login and registor"
   }
 ]
