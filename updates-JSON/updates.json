@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2025-04-01",
+    "title": "New Feature Added",
+    "description": "We added a new feature to our bus tracking system that allows for real-time updates."
+  },
+  {
+    "date": "2025-03-25",
+    "title": "Bug Fixes",
+    "description": "We fixed some bugs that were causing slow load times on the timetable page."
+  }
+]

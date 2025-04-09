@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Updates</title>
+  <script src="load.js"></script>
+</head>
+
+<body>
+  <div id="header"></div>
+  <button class="dark-mode-toggle" id="dark-mode-toggle">Toggle Dark Mode</button>
+  <h1>Latest Updates</h1>
+  <div class="updates" id="updates-container">
+  </div>
+  <script>
+    // Fetch updates
+    async function loadUpdates() {
+      try {
+        const response = await fetch('/updates-JSON/updates.json'); // Fetch the JSON file directly
+        const updates = await response.json(); // Parse the JSON response
+        const container = document.getElementById('updates-container');
+
+        updates.forEach(update => {
+          const updateItem = document.createElement('div');
+          updateItem.classList.add('update-item');
+
+          const title = document.createElement('h3');
+          title.textContent = update.title;
+
+          const date = document.createElement('p');
+          date.classList.add('date');
+          date.textContent = `Date: ${update.date}`;
+
+          const description = document.createElement('p');
+          description.textContent = update.description;
+
+          updateItem.appendChild(title);
+          updateItem.appendChild(date);
+          updateItem.appendChild(description);
+
+          container.appendChild(updateItem);
+        });
+      } catch (error) {
+        const container = document.getElementById('updates-container');
+        container.innerHTML = `<p class="error-message">Error loading updates.</p>`;
+        console.error('Error loading updates:', error);
+      }
+    }
+
+    loadUpdates();
+  </script>
+</body>
+
+</html>

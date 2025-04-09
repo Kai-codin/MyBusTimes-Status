@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Status Checker</title>
+  <script src="load.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+  <button class="dark-mode-toggle" id="dark-mode-toggle">Toggle Dark Mode</button>
+  <h1>Website Status Checker</h1>
+  <ul id="status-list"></ul>
+
+  <script>
+    const sites = [
+      { url: "https://mybustimes.cc", name: "MyBusTimes" },
+      { url: "https://ticketer.mybustimes.cc", name: "MyTicketer" },
+      { url: "https://updates.mybustimes.cc", name: "MyBusTimes Updates" },
+      { url: "https://api.mybustimes.cc", name: "MyBusTimes API" },
+      { url: "https://new.mybustimes.cc", name: "New MyBusTimes" },
+    ];
+
+    const statusList = document.getElementById('status-list');
+
+    sites.forEach(site => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `Checking ${site.name} (${site.url})...`;
+      statusList.appendChild(listItem);
+
+      fetch(site.url, { mode: 'no-cors' })
+        .then(() => {
+          listItem.textContent = `${site.name} is ONLINE`;
+          listItem.className = 'online';
+        })
+        .catch(() => {
+          listItem.textContent = `${site.name} is OFFLINE`;
+          listItem.className = 'offline';
+        });
+    });
+  </script>
+</body>
+</html>

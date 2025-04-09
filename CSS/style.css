@@ -1,0 +1,255 @@
+:root {
+    --link-color: #5544cc;
+    --brand-color: #8cb9d5;
+    --brand-color-darker: #93ccff;
+    --border-color: #93ccff;
+    --border-color-darker: #77a4dd;
+    --text-color: #000;
+    --background-color: #fff;
+    --header-padding: 20px;
+    --online:#b8f2c6;
+    --online-text: #000;
+    --offline: #ffb9bf;
+    --offline-text: #000;
+}
+
+/* Dark mode variables */
+body.dark-mode {
+    --link-color: #93ccff;
+    --brand-color: #3c4f8b;
+    --brand-color-darker: #6f8fc1;
+    --border-color: #6f8fc1;
+    --border-color-darker: #4a6882;
+    --text-color: #fff;
+    --background-color: #121212;
+    --online:#0c912b;
+    --online-text: #fff;
+    --offline: #971520;
+    --offline-text: #fff;
+}
+
+.online {
+    background-color: var(--online);
+    color: var(--online-text);
+}
+
+.offline {
+    background-color: var(--offline);
+    color: var(--offline-text);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--brand-color);
+    padding: var(--header-padding);
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+}
+
+#status-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+#status-list li {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 5px 0;
+}
+
+header nav ul li a:hover {
+    color: var(--link-color);
+    transform: translateY(-3px);
+}
+
+header nav ul li a:active {
+    transform: translateY(1px);
+}
+
+/* Dark Mode Header */
+body.dark-mode header {
+    background-color: var(--brand-color-darker);
+}
+
+/* Hover Effects */
+header nav ul li a:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+/* Miscellaneous Styles */
+.updates,
+.features {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.update-item {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+body.dark-mode .update-item {
+    background-color: #222;
+}
+
+/* Light Mode Update Items */
+.update-item h3 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.update-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.update-item .date {
+    font-style: italic;
+    color: #777;
+}
+
+/* Hover effect for update items */
+.update-item:hover {
+    background-color: var(--border-color-darker);
+    cursor: pointer;
+}
+
+/* Dark mode update item styles */
+body.dark-mode .update-item:hover {
+    background-color: var(--border-color);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--link-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--brand-color-darker);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    width: 75%;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+table th {
+    background-color: var(--brand-color);
+    color: white;
+    font-size: 1.2rem;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f90a;
+}
+
+table tr:hover {
+    background-color: var(--border-color-darker);
+}
+
+table td {
+    cursor: pointer;
+}
+
+.status-label {
+    font-weight: bold;
+}
+
+.enabled {
+    color: green;
+}
+
+.disabled {
+    color: red;
+}
+
+.maintenance {
+    color: orange;
+}
+
+.coming_soon {
+    color: gray;
+}
+
+/* Error Message */
+.error-message {
+    text-align: center;
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
