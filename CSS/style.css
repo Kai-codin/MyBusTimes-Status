@@ -177,7 +177,7 @@ body.dark-mode .update-item:hover {
 /* Dark Mode Toggle Button */
 .dark-mode-toggle {
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     background-color: var(--link-color);
     color: var(--background-color);
