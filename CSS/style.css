@@ -105,6 +105,7 @@ header nav ul li a {
     font-weight: bold;
     transition: color 0.3s ease, transform 0.2s ease;
     padding: 5px 0;
+    font-size: 2em;
 }
 
 header nav ul li a:hover {
