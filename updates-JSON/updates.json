@@ -2,6 +2,26 @@
   {
     "date": "2025-04-09",
     "title": "Bug Fixes",
-    "description": "So fare i have got the base for the site setup and the main styling. I have also added the acount login and registor"
+    "description": "So far I have got the base for the site setup and the main styling. I have also added the account login and register"
+  },
+  {
+    "date:": "2025-04-16",
+    "title": "Update V2.1.3.7",
+    "description": "
+    Pages the now work:
+      Fleet,
+      Vehicle,
+      Edit,
+      Routes,
+      Home,
+      Region,
+      Game,
+      Game Routes,
+      Game Route,
+      Game Route Finder,
+      Profile,
+      Feature status
+
+    I have also get history to auto save when you edit a vehicle now just need to added the history pages for User Operator and Vehicle
   }
 ]
